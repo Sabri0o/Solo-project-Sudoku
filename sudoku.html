@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Sudoku V0.1</title>
 <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Goldman&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
@@ -351,7 +351,6 @@
 
 <script>
 
- //$("#newgame").click(setpuzzle);
 
   $("#newgame").click(function() {
 
@@ -362,34 +361,42 @@
     let flatTemporary =  [7, 0, 0, 0, 0, 5, 4, 9, 0, 8, 1, 0, 0, 0, 3, 6, 0, 0, 6, 0, 9, 8, 0, 0, 3, 0, 0, 4, 9, 2, 7, 8, 1, 5, 0, 0, 0, 0, 5, 2, 0, 9, 8, 0, 1, 1, 0, 0, 5, 0, 0, 2, 0, 9, 9, 4, 0, 0, 5, 0, 0, 0, 0, 0, 0, 6, 3, 1, 7, 0, 2, 4, 0, 0, 0, 0, 9, 8, 1, 6, 0]
     
     let setpuzzle = function(set=flatTemporary){
-var inputs = document.getElementsByTagName("input")
-console.log(inputs[0])
-    $('input').css("background-color", "white")
-
-    for(var i=0;i<81;i++){
-        if(set[i]===0){
-            inputs[i].disabled = false
-            inputs[i].value = ''
-        }else{
-            inputs[i].value = set[i]
+        var inputs = document.getElementsByTagName("input")
+        console.log(inputs[0])
+        $('input').css("background-color", "white")
+        for(var i=0;i<81;i++){
+            if(set[i]===0){
+                inputs[i].disabled = false
+                inputs[i].value = ''
+            }else{
+                inputs[i].value = set[i]
+            }
         }
-    }
-$('input:disabled').css("background-color", "#bbdefb")
-
-}
-
-
+        $('input:disabled').css("background-color", "#bbdefb")
+        }
     console.log(setpuzzle(flatTemporary))
     setpuzzle(flatTemporary)
     }
 
+
 });
 
+var inputs = document.getElementsByTagName("input")
+
+var checker = function(){
+    var c = [7, 2, 3, 1, 6, 5, 4, 9, 8, 8, 1, 4, 9, 7, 3, 6, 5, 2, 6, 5, 9, 8, 2, 4, 3, 1, 7, 4, 9, 2, 7, 8, 1, 5, 3, 6, 3, 6, 5, 2, 4, 9, 8, 7, 1, 1, 7, 8, 5, 3, 6, 2, 4, 9, 9, 4, 1, 6, 5, 2, 7, 8, 3, 5, 8, 6, 3, 1, 7, 9, 2, 4, 2, 3, 7, 4, 9, 8, 1, 6, 5]
+
+    for(var i=0 ;i<81;i++){
+        if(Number(inputs[i].value) != c[i] || inputs[i].value==='' ){
+            return false
+        }
+    }
+    return true
+}
 
 
 
  function gfg_Run() {
-
     var test = checker()
     if(test){
         $('input').css("background-color", "green") 
