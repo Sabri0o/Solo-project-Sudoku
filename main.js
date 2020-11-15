@@ -92,15 +92,15 @@ var y =
 
 
 var temporary = 
-[ [ 7, 0, 0, 0, 0, 5, 4, 9, 0 ],
-  [ 8, 1, 0, 0, 0, 3, 6, 0, 0 ],
-  [ 6, 0, 9, 8, 0, 0, 3, 0, 0 ],
-  [ 4, 9, 2, 7, 8, 1, 5, 0, 0 ],
-  [ 0, 0, 5, 2, 0, 9, 8, 0, 1 ],
-  [ 1, 0, 0, 5, 0, 0, 2, 0, 9 ],
-  [ 9, 4, 0, 0, 5, 0, 0, 0, 0 ],
-  [ 0, 0, 6, 3, 1, 7, 0, 2, 4 ],
-  [ 0, 0, 0, 0, 9, 8, 1, 6, 0 ] ]
+[ [ 7, 2, 3, 1, 6, 5, 4, 9, 8 ],
+  [ 8, 1, 4, 9, 7, 3, 6, 5, 2 ],
+  [ 6, 5, 9, 8, 2, 4, 3, 1, 7 ],
+  [ 4, 9, 2, 7, 8, 1, 5, 3, 6 ],
+  [ 3, 6, 5, 2, 4, 9, 8, 7, 1 ],
+  [ 1, 7, 8, 5, 3, 6, 2, 4, 9 ],
+  [ 9, 4, 1, 6, 5, 2, 7, 8, 3 ],
+  [ 5, 8, 6, 3, 1, 7, 9, 2, 4 ],
+  [ 2, 3, 7, 4, 9, 8, 1, 6, 5 ] ]
 
 
 var fill = function(arr0,row,column){
@@ -169,7 +169,7 @@ var randomIndex = function(setLength){
 
 var initiate = function (solved,difficulty){
 	var init = solved.slice()
-    var set = {'difficult':40,'medium':30,'easy':20}
+    var set = {'difficult':40,'medium':30,'easy':1}
     var randomClear = randomIndex(set[difficulty])
     //console.log(randomClear)
     for(var i=0;i<randomClear.length;i++){
@@ -196,7 +196,7 @@ var flat = function(arr){
 var newGameflat = flat(newGame)
 var inputs = document.getElementsByTagName("input")
 
-var flatTemporary = flat(temporary)
+//var flatTemporary = flat(temporary)
 
 var setpuzzle = function(set=newGameflat){
 
@@ -216,9 +216,8 @@ $('input:disabled').css("background-color", "#bbdefb")
 }
 
 
-
-var checker = function(){
-	var c = flat(y)
+var checker = function(set=y){
+	var c = flat(set)
 	for(var i=0 ;i<81;i++){
 		if(Number(inputs[i].value) != c[i] || inputs[i].value==='' ){
 			return false
@@ -226,7 +225,6 @@ var checker = function(){
 	}
 	return true
 }
-
 
 
 
