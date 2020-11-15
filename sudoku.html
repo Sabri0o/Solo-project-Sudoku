@@ -383,21 +383,22 @@
 
 var inputs = document.getElementsByTagName("input")
 
-var checker = function(){
-    var c = [7, 2, 3, 1, 6, 5, 4, 9, 8, 8, 1, 4, 9, 7, 3, 6, 5, 2, 6, 5, 9, 8, 2, 4, 3, 1, 7, 4, 9, 2, 7, 8, 1, 5, 3, 6, 3, 6, 5, 2, 4, 9, 8, 7, 1, 1, 7, 8, 5, 3, 6, 2, 4, 9, 9, 4, 1, 6, 5, 2, 7, 8, 3, 5, 8, 6, 3, 1, 7, 9, 2, 4, 2, 3, 7, 4, 9, 8, 1, 6, 5]
-
-    for(var i=0 ;i<81;i++){
-        if(Number(inputs[i].value) != c[i] || inputs[i].value==='' ){
-            return false
-        }
-    }
-    return true
-}
-
-
-
  function gfg_Run() {
-    var test = checker()
+    try{
+        var test = checker()
+    }catch{
+
+       var c = [7, 2, 3, 1, 6, 5, 4, 9, 8, 8, 1, 4, 9, 7, 3, 6, 5, 2, 6, 5, 9, 8, 2, 4, 3, 1, 7, 4, 9, 2, 7, 8, 1, 5, 
+3, 6, 3, 6, 5, 2, 4, 9, 8, 7, 1,1, 7, 8, 5, 3, 6, 2, 4, 9, 9, 4, 1, 6, 5, 2, 7, 8, 3, 5, 8, 6, 3, 1, 7, 9, 2, 4, 2, 3, 7, 4, 9, 8, 1, 6, 5]
+
+       for(var i=0 ;i<81;i++){
+         if(Number(inputs[i].value) != c[i] || inputs[i].value==='' ){
+            var test = false
+          }
+     }
+    var test = true
+    }
+    
     if(test){
         $('input').css("background-color", "green") 
         setTimeout(function(){ $('input').css("background-color", "white")
