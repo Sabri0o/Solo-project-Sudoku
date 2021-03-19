@@ -1,6 +1,5 @@
-
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
@@ -9,7 +8,7 @@ body {
 }
 
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
@@ -28,53 +27,51 @@ body::before {
   background-position: center;
 }
 
-
 table {
-
-    margin:  auto;
-    border: 2px solid #000000;
-    border-spacing: 0;
-    border-collapse: collapse;
+  margin: auto;
+  border: 2px solid #000000;
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 
 td {
-    border: 1px solid #000000;
-    text-align: center;
-    vertical-align: middle;
+  border: 1px solid #000000;
+  text-align: center;
+  vertical-align: middle;
 }
 
 td input {
-    color: #000000;
-    padding: 0;
-    border: 0;
-    text-align: center;
-    width: 48px;
-    height: 48px;
-    font-size: 24px;
-    background-color: #FFFFFF;
-    outline: none;
-    text-transform: uppercase;
-    opacity: 0.7;
+  color: #000000;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  background-color: #ffffff;
+  outline: none;
+  text-transform: uppercase;
+  opacity: 0.7;
 }
 
 tr:nth-child(3n) {
-    border-bottom: 4px solid #000000;
+  border-bottom: 4px solid #000000;
 }
 
-tr:nth-child(3n+1) {
-    border-top: 4px solid #000000;
+tr:nth-child(3n + 1) {
+  border-top: 4px solid #000000;
 }
 
 td:nth-child(3n) {
-    border-right: 4px solid #000000;
+  border-right: 4px solid #000000;
 }
 
-td:nth-child(3n+1) {
-    border-left: 4px solid #000000;
+td:nth-child(3n + 1) {
+  border-left: 4px solid #000000;
 }
 
 input:disabled {
-    background-color: #bbdefb;
+  background-color: #bbdefb;
 }
 
 h1 {
@@ -85,19 +82,18 @@ h1 {
   margin-left: 15px;
 }
 
-#note{
+#note {
   margin-left: 15px;
   font-size: 16px;
 }
 
-
 button {
   background-color: green;
-  color:white;
+  color: white;
   font-size: 25px;
   font-weight: 30px;
-  width:200px;
-  height: 50px
+  width: 200px;
+  height: 50px;
   padding: auto;
   border-radius: 5px;
 }
@@ -112,41 +108,37 @@ button {
   margin-right: auto;
   margin-left: 100px;
   float: left;
-  margin-top: 10%
+  margin-top: 10%;
 }
 
 .card-game {
   width: auto;
-  margin-left : 0px;
+  margin-left: 0px;
   margin-top: 135px;
-
 }
 
-.container{
+.container {
   display: flex;
   align-items: center;
 }
-
 
 .button {
   width: 50%;
   height: 50%;
   border: none;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
-  padding: 15px 32px
+  padding: 15px 32px;
   font-size: 16px;
   cursor: pointer;
   text-align: center;
 }
 
-
-#check{
-  width: 50px
-  height:15px;
+#check {
+  width: 50px;
+  height: 15px;
 }
 
 #rules {
-  
-  width : 900px;
+  width: 900px;
 }

@@ -1,423 +1,583 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Sudoku V0.1</title>
-<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Goldman&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+  <title>Sudoku V0.1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Goldman&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet" />
   <script src="jquery.js"></script>
   <script src="./main.js"></script>
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
   <style type="text/css">
-      
-      }
+
+
   </style>
 </head>
+
 <body>
-    <div class ='container'>
-<div class='infos'>
-<div id='rules'>
-<h1>Sudoku V0.1</h1>
-<p>Following are the rules of Suduku for a player.</p>
-<ul>
-<li>In all 9 sub matrices 3×3 the elements should be 1-9, without repetition.</li>
-<li>In all rows there should be elements between 1-9 , without repetition.</li>
-<li>In all columns there should be elements between 1-9 , without repetition.</li>
-</ul>
-<p id='note'><u>Upcoming features:</u> <em>timer</em>, <em>Pause button</em> and <em>Game difficulty setting</em> .</p>
-</div>
+  <div class="container">
+    <div class="infos">
+      <div id="rules">
+        <h1>Sudoku V0.1</h1>
+        <p>Following are the rules of Suduku for a player.</p>
+        <ul>
+          <li>
+            In all 9 sub matrices 3×3 the elements should be 1-9, without
+            repetition.
+          </li>
+          <li>
+            In all rows there should be elements between 1-9 , without
+            repetition.
+          </li>
+          <li>
+            In all columns there should be elements between 1-9 , without
+            repetition.
+          </li>
+        </ul>
+        <p id="note">
+          <u>Upcoming features:</u> <em>timer</em>, <em>Pause button</em> and
+          <em>Game difficulty setting</em> .
+        </p>
+      </div>
 
-<div class="buttons">
-<div class = 'button'>
-    <button id='newgame' type="button">New Game</button>
-</div>
-
-<br>
-
-<div class = 'button'>
-    <button  id='check' type="button" onclick = "gfg_Run()">
-     Check
-    </button>
-</div>
-
-<br>
-
-<div class = 'button'>
-    <button  id='Quit' type="button" onclick="location.reload()">
-     Quit
-    </button>
-</div>
-</div>
-</div>
-
-
-
-        <div class="card-game">
-            <table id="puzzle-grid">
-                <tr>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1" disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1" disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1" disabled/>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="text" maxlength="1" disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1" disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1" disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1" disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1" disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1" disabled/>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1" disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1" disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                    <td>
-                        <input type="text" maxlength="1"  disabled/>
-                    </td>
-                </tr>
-
-            </table>
+      <div class="buttons">
+        <div class="button">
+          <button id="newgame" type="button">New Game</button>
         </div>
 
+        <br />
 
-</div>
+        <div class="button">
+          <button id="check" type="button" onclick="gfg_Run()">Check</button>
+        </div>
 
+        <br />
 
-<script>
+        <div class="button">
+          <button id="Quit" type="button" onclick="location.reload()">
+            Quit
+          </button>
+        </div>
+      </div>
+    </div>
 
+    <div class="card-game">
+      <table id="puzzle-grid">
+        <tr>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
 
-  $("#newgame").click(function() {
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
 
-    try{
-        setpuzzle()  
-    }catch{
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+        </tr>
 
-    let flatTemporary =  [7, 0, 0, 0, 0, 5, 4, 9, 0, 8, 1, 0, 0, 0, 3, 6, 0, 0, 6, 0, 9, 8, 0, 0, 3, 0, 0, 4, 9, 2, 7, 8, 1, 5, 0, 0, 0, 0, 5, 2, 0, 9, 8, 0, 1, 1, 0, 0, 5, 0, 0, 2, 0, 9, 9, 4, 0, 0, 5, 0, 0, 0, 0, 0, 0, 6, 3, 1, 7, 0, 2, 4, 0, 0, 0, 0, 9, 8, 1, 6, 0]
-    
-    let setpuzzle = function(set=flatTemporary){
-        var inputs = document.getElementsByTagName("input")
-        console.log(inputs[0])
-        $('input').css("background-color", "white")
-        for(var i=0;i<81;i++){
-            if(set[i]===0){
-                inputs[i].disabled = false
-                inputs[i].value = ''
-            }else{
-                inputs[i].value = set[i]
+        <tr>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+          <td>
+            <input type="text" maxlength="1" disabled />
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    $("#newgame").click(function () {
+      try {
+        setpuzzle();
+      } catch {
+        let flatTemporary = [
+          7,
+          0,
+          0,
+          0,
+          0,
+          5,
+          4,
+          9,
+          0,
+          8,
+          1,
+          0,
+          0,
+          0,
+          3,
+          6,
+          0,
+          0,
+          6,
+          0,
+          9,
+          8,
+          0,
+          0,
+          3,
+          0,
+          0,
+          4,
+          9,
+          2,
+          7,
+          8,
+          1,
+          5,
+          0,
+          0,
+          0,
+          0,
+          5,
+          2,
+          0,
+          9,
+          8,
+          0,
+          1,
+          1,
+          0,
+          0,
+          5,
+          0,
+          0,
+          2,
+          0,
+          9,
+          9,
+          4,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          3,
+          1,
+          7,
+          0,
+          2,
+          4,
+          0,
+          0,
+          0,
+          0,
+          9,
+          8,
+          1,
+          6,
+          0,
+        ];
+
+        let setpuzzle = function (set = flatTemporary) {
+          var inputs = document.getElementsByTagName("input");
+          console.log(inputs[0]);
+          $("input").css("background-color", "white");
+          for (var i = 0; i < 81; i++) {
+            if (set[i] === 0) {
+              inputs[i].disabled = false;
+              inputs[i].value = "";
+            } else {
+              inputs[i].value = set[i];
             }
+          }
+          $("input:disabled").css("background-color", "#bbdefb");
+        };
+        console.log(setpuzzle(flatTemporary));
+        setpuzzle(flatTemporary);
+      }
+    });
+
+    var inputs = document.getElementsByTagName("input");
+
+    function gfg_Run() {
+      try {
+        var test = checker();
+      } catch {
+        var c = [
+          7,
+          2,
+          3,
+          1,
+          6,
+          5,
+          4,
+          9,
+          8,
+          8,
+          1,
+          4,
+          9,
+          7,
+          3,
+          6,
+          5,
+          2,
+          6,
+          5,
+          9,
+          8,
+          2,
+          4,
+          3,
+          1,
+          7,
+          4,
+          9,
+          2,
+          7,
+          8,
+          1,
+          5,
+          3,
+          6,
+          3,
+          6,
+          5,
+          2,
+          4,
+          9,
+          8,
+          7,
+          1,
+          1,
+          7,
+          8,
+          5,
+          3,
+          6,
+          2,
+          4,
+          9,
+          9,
+          4,
+          1,
+          6,
+          5,
+          2,
+          7,
+          8,
+          3,
+          5,
+          8,
+          6,
+          3,
+          1,
+          7,
+          9,
+          2,
+          4,
+          2,
+          3,
+          7,
+          4,
+          9,
+          8,
+          1,
+          6,
+          5,
+        ];
+
+        var test = true;
+        for (var i = 0; i < 81; i++) {
+          if (Number(inputs[i].value) != c[i] || inputs[i].value === "") {
+            test = false;
+          }
         }
-        $('input:disabled').css("background-color", "#bbdefb")
-        }
-    console.log(setpuzzle(flatTemporary))
-    setpuzzle(flatTemporary)
+      }
+
+      if (test) {
+        $("input").css("background-color", "green");
+        setTimeout(function () {
+          $("input").css("background-color", "white");
+          $("input:disabled").css("background-color", "#bbdefb");
+          alert("Congrats");
+          location.reload();
+        }, 800);
+      } else {
+        $("input").css("background-color", "red");
+        setTimeout(function () {
+          $("input").css("background-color", "white");
+          $("input:disabled").css("background-color", "#bbdefb");
+        }, 800);
+      }
     }
-
-
-});
-
-var inputs = document.getElementsByTagName("input")
-
- function gfg_Run() {
-    try{
-        var test = checker()
-    }catch{
-
-    var c = [7, 2, 3, 1, 6, 5, 4, 9, 8, 8, 1, 4, 9, 7, 3, 6, 5, 2, 6, 5, 9, 8, 2, 4, 3, 1, 7, 4, 9, 2, 7, 8, 1, 5, 
-3, 6, 3, 6, 5, 2, 4, 9, 8, 7, 1,1, 7, 8, 5, 3, 6, 2, 4, 9, 9, 4, 1, 6, 5, 2, 7, 8, 3, 5, 8, 6, 3, 1, 7, 9, 2, 4, 2, 3, 7, 4, 9, 8, 1, 6, 5]
-
-    var test = true
-    for(var i=0 ;i<81;i++){
-        if(Number(inputs[i].value) != c[i] || inputs[i].value==='' ){
-            test = false
-        }
-    }
-}
-    
-    if(test){
-        $('input').css("background-color", "green") 
-        setTimeout(function(){ $('input').css("background-color", "white")
-        $('input:disabled').css("background-color", "#bbdefb") 
-         alert("Congrats")
-         location.reload()
-    }, 800);
-
-        
-    }else{
-        $('input').css("background-color", "red")
-        setTimeout(function(){ $('input').css("background-color", "white")
-        $('input:disabled').css("background-color", "#bbdefb") }, 800);
-     
-    }
-}  
-
-</script>
+  </script>
 </body>
+
 </html>
-
-
